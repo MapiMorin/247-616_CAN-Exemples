@@ -60,7 +60,7 @@ int main(int argc, char *argv[]) //char **argv)
 		perror("Bind");
 		return -1;
 	}
-
+	
 	// appel système read(). Cela bloquera jusqu'à ce qu'une trame soit disponible
 	nbytes = read(fdSocketCAN, &frame, sizeof(struct can_frame));
 
@@ -80,4 +80,5 @@ int main(int argc, char *argv[]) //char **argv)
 	}
 
 	return 0;
+	 
 }
